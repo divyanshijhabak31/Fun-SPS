@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Stone Paper Scissor</title>
-    <link rel="stylesheet" type="text/css" href="game.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -22,14 +22,14 @@
 <div id="game">
      <p>Computer</p>
     	<div id="game1">
-    	  <img src="aks/game1.jpg">
+    	  <img src="game1.jpg">
         </div>	
 </div>
 
 <div id="game">
       <p>You</p>
     	<div id="game2">
-          <img src="aks/game1.jpg">
+          <img src="game1.jpg">
         </div>
 </div>
 <div id="btn">
@@ -41,12 +41,12 @@
 
 function sps() {
       var s1=(Math.floor(Math.random()*3)+1);
-      var sps1=`aks/game${s1}.jpg`;
+      var sps1=`game${s1}.jpg`;
       //document.write(s1);
       document.querySelectorAll("img")[0].setAttribute("src",sps1);
 
        var s2=(Math.floor(Math.random()*3)+1);
-      var sps2=`aks/game${s2}.jpg`;
+      var sps2=`game${s2}.jpg`;
       document.querySelectorAll("img")[1].setAttribute("src",sps2);
 
         if(s1==1&&s2==3){
