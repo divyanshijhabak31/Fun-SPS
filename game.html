@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stone Paper Scissor</title>
+    <link rel="stylesheet" type="text/css" href="game.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div id="demo">
+	<h1>Stone Paper Scissor</h1>
+
+	<div id="score">
+       <h2> Computer score</h2>
+    </div>
+    <div id="sco">
+       <h3>your Score</h3>
+    </div>
+    
+	<div id="main">
+	<p>Let's Play</p>
+    </div> 
+<div id="game">
+     <p>Computer</p>
+    	<div id="game1">
+    	  <img src="aks/game1.jpg">
+        </div>	
+</div>
+
+<div id="game">
+      <p>You</p>
+    	<div id="game2">
+          <img src="aks/game1.jpg">
+        </div>
+</div>
+<div id="btn">
+	<button onclick="sps()"> Click Here</button>
+</div>
+</div>
+<script>
+	
+
+function sps() {
+      var s1=(Math.floor(Math.random()*3)+1);
+      var sps1=`aks/game${s1}.jpg`;
+      //document.write(s1);
+      document.querySelectorAll("img")[0].setAttribute("src",sps1);
+
+       var s2=(Math.floor(Math.random()*3)+1);
+      var sps2=`aks/game${s2}.jpg`;
+      document.querySelectorAll("img")[1].setAttribute("src",sps2);
+
+        if(s1==1&&s2==3){
+        	document.querySelector("h1").innerHTML="Player 1 win:)";
+        	play1();
+        }
+        
+        else if(s1==3&& s2==1){
+        	document.querySelector("h1").innerHTML="Player 2 win!!";
+        	play2();
+        }
+      
+        else if(s1<s2){
+     	document.querySelector("h1").innerHTML="Player 2 win!!";
+     	play2();
+     	}
+
+        else if(s1>s2){
+        	document.querySelector("h1").innerHTML="Player 1 win:)";
+            play1();           
+        }
+
+        else{
+          	document.querySelector("h1").innerHTML=" Draw!!";
+        }       	
+       	}//closing of sps function!!!	
+var c=0;    //score of player1
+var d=0;    //score of player 2
+function play1(){
+	c++;
+	document.querySelector("h2").innerHTML="Score of Player1 ="+" "+c;
+}
+
+function play2(){
+	d++;
+	document.querySelector("h3").innerHTML="Score of Player 2="+" "+d;
+}
+
+</script>
+</body>
+</html>
